@@ -1,7 +1,7 @@
 import { describe, it, expect, vi } from 'vitest';
-import { render, screen } from '../../test-utils/test-utils';
-import userEvent from '@testing-library/user-event';
+import { render, screen } from '../../../test-utils/test-utils';
 import { Input } from './Input';
+import userEvent from '@testing-library/user-event';
 
 describe('Input', () => {
     it('renders correctly with label', () => {

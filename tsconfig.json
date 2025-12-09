@@ -27,7 +27,6 @@
         "node_modules",
         "dist",
         "**/*.stories.tsx",
-        "src/**/*.test.tsx",
         "src/test-utils",
         "**/*Demo.tsx"
     ]
