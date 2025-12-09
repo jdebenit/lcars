@@ -1,0 +1,14 @@
+import{j as e}from"./jsx-runtime-DiklIkkE.js";import{C as v}from"./Corner-DwoPOox8.js";import{B as o}from"./Bar-CQUNA_iu.js";import"./index-DRjF_FHU.js";const f="_sideNav_jzszu_1",_="_header_jzszu_9",h="_headerTitle_jzszu_18",N="_navItems_jzszu_38",I="_navItemWrapper_jzszu_46",j="_navItem_jzszu_38",g="_active_jzszu_75",x="_footer_jzszu_81",z="_filler_jzszu_89",a={sideNav:f,header:_,headerTitle:h,navItems:N,navItemWrapper:I,navItem:j,active:g,footer:x,filler:z},n=({items:r,title:m="NAVIGATION",color:l="blue",width:i=190,className:p=""})=>e.jsxs("nav",{className:`${a.sideNav} ${p}`,style:{width:i},children:[e.jsxs("div",{className:a.header,children:[e.jsx(v,{corner:"top-right",color:l,width:i,height:60,thickness:30}),e.jsx("span",{className:a.headerTitle,children:m})]}),e.jsx("div",{className:a.navItems,children:r.map(t=>e.jsx("div",{className:a.navItemWrapper,children:e.jsx(o,{color:t.active?"orange":l,rounded:"both",className:`${a.navItem} ${t.active?a.active:""}`,onClick:t.onClick,children:t.label})},t.id))}),e.jsx("div",{className:a.footer,children:e.jsx(o,{color:l,rounded:"bottom",className:a.filler})})]});n.__docgenInfo={description:"",methods:[],displayName:"SideNav",props:{items:{required:!0,tsType:{name:"Array",elements:[{name:"SideNavItem"}],raw:"SideNavItem[]"},description:""},title:{required:!1,tsType:{name:"string"},description:"",defaultValue:{value:"'NAVIGATION'",computed:!1}},color:{required:!1,tsType:{name:"union",raw:"'orange' | 'blue' | 'purple' | 'red' | 'yellow' | 'tan'",elements:[{name:"literal",value:"'orange'"},{name:"literal",value:"'blue'"},{name:"literal",value:"'purple'"},{name:"literal",value:"'red'"},{name:"literal",value:"'yellow'"},{name:"literal",value:"'tan'"}]},description:"",defaultValue:{value:"'blue'",computed:!1}},width:{required:!1,tsType:{name:"number"},description:"Width of the navigation column",defaultValue:{value:"190",computed:!1}},className:{required:!1,tsType:{name:"string"},description:"",defaultValue:{value:"''",computed:!1}}}};const A={title:"Layout/SideNav",component:n,tags:["autodocs"],argTypes:{color:{control:{type:"select"},options:["orange","blue","purple","red","yellow","tan"]}}},y=[{id:"1",label:"MAIN BRIDGE",active:!0},{id:"2",label:"ENGINEERING",active:!1},{id:"3",label:"TRANSPORTER",active:!1},{id:"4",label:"SICKBAY",active:!1}],s={args:{title:"DECK 1",items:y,color:"purple",width:190},render:r=>e.jsx("div",{style:{height:"600px",padding:"20px"},children:e.jsx(n,{...r})})};var d,c,u;s.parameters={...s.parameters,docs:{...(d=s.parameters)==null?void 0:d.docs,source:{originalSource:`{
+  args: {
+    title: 'DECK 1',
+    items: items,
+    color: 'purple',
+    width: 190
+  },
+  render: args => <div style={{
+    height: '600px',
+    padding: '20px'
+  }}>
+            <SideNav {...args} />
+        </div>
+}`,...(u=(c=s.parameters)==null?void 0:c.docs)==null?void 0:u.source}}};const w=["Default"];export{s as Default,w as __namedExportsOrder,A as default};

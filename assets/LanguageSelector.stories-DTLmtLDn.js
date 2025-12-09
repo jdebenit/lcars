@@ -1,0 +1,6 @@
+import{j as n}from"./jsx-runtime-DiklIkkE.js";import{S as u}from"./Select-KFRKUbWz.js";import{u as p}from"./useTranslation-CxQ6l0w6.js";import"./index-DRjF_FHU.js";const d="_languageSelector_1fp85_1",m={languageSelector:d},r=()=>{const{i18n:e}=p(),o=s=>{e.changeLanguage(s)},t=[{label:"EN",value:"en"},{label:"ES",value:"es"}];return n.jsx("div",{className:m.languageSelector,children:n.jsx(u,{value:e.language,onChange:o,options:t,placeholder:"LANG"})})};r.__docgenInfo={description:"",methods:[],displayName:"LanguageSelector"};const{useArgs:i}=__STORYBOOK_MODULE_PREVIEW_API__,E={title:"Form/LanguageSelector",component:r,parameters:{layout:"centered"},tags:["autodocs"],argTypes:{language:{control:"select",options:["en","es"]},onChange:{action:"changed"}}},_={render:e=>{const[{language:o},t]=i();return n.jsx("div",{style:{backgroundColor:"black",padding:"20px"},children:n.jsx(r,{...e,language:o,onChange:s=>t({language:s})})})}},a={..._,args:{language:"en"}};var g,l,c;a.parameters={...a.parameters,docs:{...(g=a.parameters)==null?void 0:g.docs,source:{originalSource:`{
+  ...Template,
+  args: {
+    language: 'en'
+  }
+}`,...(c=(l=a.parameters)==null?void 0:l.docs)==null?void 0:c.source}}};const L=["Default"];export{a as Default,L as __namedExportsOrder,E as default};
