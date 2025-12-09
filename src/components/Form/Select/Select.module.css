@@ -1,0 +1,142 @@
+.selectContainer {
+    position: relative;
+    display: inline-block;
+    min-width: 200px;
+    font-family: 'Antonio', 'Arial Narrow', sans-serif;
+    text-transform: uppercase;
+}
+
+.label {
+    display: block;
+    color: var(--lcars-orange, #ff9900);
+    margin-bottom: 4px;
+    font-size: 1rem;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.selectButton {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    background-color: var(--lcars-orange, #ff9900);
+    border-radius: 15px;
+    /* Rounded pill shape */
+    cursor: pointer;
+    user-select: none;
+    padding: 0 15px;
+    position: relative;
+    justify-content: space-between;
+    transition: filter 0.2s;
+}
+
+.selectButton:hover {
+    filter: brightness(1.1);
+}
+
+.selectButton.open {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    filter: grayscale(0.5);
+}
+
+.valueText {
+    color: #000;
+    font-weight: bold;
+    font-size: 1.1rem;
+    flex: 1;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.indicator {
+    color: #000;
+    font-size: 0.8rem;
+}
+
+.dropdownList {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding-top: 2px;
+}
+
+.optionItem {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Opaque background for contrast */
+}
+
+.optionItem:hover .optionBar,
+.optionItem:hover .optionLabel {
+    color: var(--lcars-white, #fff);
+    background-color: var(--lcars-blue, #99ccff);
+}
+
+.selected .optionBar {
+    background-color: var(--lcars-white, #fff) !important;
+}
+
+.optionBar {
+    width: 10px;
+    height: 100%;
+    background-color: var(--lcars-tan, #ffcc99);
+    margin-right: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.optionLabel {
+    color: var(--lcars-tan, #ffcc99);
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.optionItem:hover .optionLabel {
+    color: var(--lcars-orange-light, #ffcc00);
+    /* Keep text visible on black background */
+    background-color: transparent;
+}
+
+/* Specific button colors mapping */
+.color-orange {
+    background-color: var(--lcars-orange, #ff9900);
+}
+
+.color-blue {
+    background-color: var(--lcars-blue, #99ccff);
+}
+
+.color-purple {
+    background-color: var(--lcars-purple, #cc99cc);
+}
+
+.color-red {
+    background-color: var(--lcars-red, #cc6666);
+}
+
+.color-tan {
+    background-color: var(--lcars-tan, #ffcc99);
+}
+
+.color-yellow {
+    background-color: var(--lcars-yellow, #ffcc33);
+}
+
+.color-white {
+    background-color: var(--lcars-white, #ffffff);
+}

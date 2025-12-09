@@ -1,0 +1,96 @@
+.podCard {
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid transparent;
+    border-radius: 8px;
+    /* LCARS rounded corners */
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: all 0.2s ease;
+    border-left-width: 4px;
+}
+
+.podCard:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.borderRunning {
+    border-color: var(--lcars-blue);
+}
+
+.borderPending {
+    border-color: var(--lcars-yellow);
+}
+
+.borderFailed {
+    border-color: var(--lcars-red);
+}
+
+.borderUnknown {
+    border-color: var(--lcars-purple);
+}
+
+.podHeader {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 0.5rem;
+}
+
+.statusIndicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: currentColor;
+}
+
+.borderRunning .statusIndicator {
+    background-color: var(--lcars-blue);
+}
+
+.borderPending .statusIndicator {
+    background-color: var(--lcars-yellow);
+}
+
+.borderFailed .statusIndicator {
+    background-color: var(--lcars-red);
+}
+
+.borderUnknown .statusIndicator {
+    background-color: var(--lcars-purple);
+}
+
+.podName {
+    font-family: 'Antonio', sans-serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--lcars-orange);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.podDetails {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.detailRow {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+}
+
+.podFooter {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: auto;
+}

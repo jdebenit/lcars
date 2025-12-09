@@ -1,0 +1,90 @@
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--lcars-space-xs);
+    font-family: var(--lcars-font-family);
+}
+
+.fullWidth {
+    width: 100%;
+}
+
+.label {
+    font-size: var(--lcars-font-size-sm);
+    color: var(--lcars-orange);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: var(--lcars-font-weight-bold);
+    margin-left: 12px;
+}
+
+.inputWrapper {
+    display: flex;
+    align-items: stretch;
+    height: 40px;
+}
+
+.prefixDecoration {
+    width: 12px;
+    background-color: var(--lcars-orange);
+    border-radius: var(--lcars-radius-pill) 0 0 var(--lcars-radius-pill);
+    margin-right: 4px;
+}
+
+.input {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: var(--lcars-text-primary);
+    padding: 0 var(--lcars-space-md);
+    font-family: 'Courier New', monospace;
+    font-size: var(--lcars-font-size-base);
+    font-weight: var(--lcars-font-weight-bold);
+    outline: none;
+    transition: all var(--lcars-transition-fast);
+}
+
+.input:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(255, 153, 0, 0.3);
+}
+
+.input::placeholder {
+    color: var(--lcars-text-muted);
+    opacity: 0.5;
+}
+
+.suffixDecoration {
+    width: 20px;
+    background-color: var(--lcars-blue);
+    border-radius: 0 var(--lcars-radius-pill) var(--lcars-radius-pill) 0;
+    margin-left: 4px;
+}
+
+/* Error State */
+.hasError {
+    background-color: rgba(204, 51, 51, 0.2);
+}
+
+.hasError:focus {
+    background-color: rgba(204, 51, 51, 0.3);
+    box-shadow: 0 0 10px rgba(204, 51, 51, 0.3);
+}
+
+.errorMessage {
+    font-size: var(--lcars-font-size-xs);
+    color: var(--lcars-status-error);
+    text-transform: uppercase;
+    margin-left: 12px;
+}
+
+/* Disabled State */
+.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.disabled .prefixDecoration,
+.disabled .suffixDecoration {
+    background-color: var(--lcars-text-muted);
+}

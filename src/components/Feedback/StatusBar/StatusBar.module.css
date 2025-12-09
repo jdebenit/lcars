@@ -1,0 +1,100 @@
+.statusBar {
+    display: flex;
+    align-items: center;
+    gap: var(--lcars-space-md);
+    padding: var(--lcars-space-sm) var(--lcars-space-md);
+    background-color: var(--lcars-bg-panel);
+    border-radius: var(--lcars-radius-md);
+    transition: all var(--lcars-transition-base);
+}
+
+.statusBar:hover {
+    transform: translateX(4px);
+    box-shadow: var(--lcars-shadow-md);
+}
+
+.statusIndicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    transition: all var(--lcars-transition-base);
+}
+
+.statusContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    gap: var(--lcars-space-md);
+}
+
+.statusLabel {
+    font-size: var(--lcars-font-size-base);
+    font-weight: var(--lcars-font-weight-medium);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--lcars-text-primary);
+}
+
+.statusValue {
+    font-size: var(--lcars-font-size-lg);
+    font-weight: var(--lcars-font-weight-bold);
+    font-family: 'Courier New', monospace;
+}
+
+/* Status Variants */
+.status-online .statusIndicator {
+    background-color: var(--lcars-status-online);
+    box-shadow: 0 0 8px var(--lcars-status-online);
+}
+
+.status-online .statusValue {
+    color: var(--lcars-status-online);
+}
+
+.status-warning .statusIndicator {
+    background-color: var(--lcars-status-warning);
+    box-shadow: 0 0 8px var(--lcars-status-warning);
+}
+
+.status-warning .statusValue {
+    color: var(--lcars-status-warning);
+}
+
+.status-error .statusIndicator {
+    background-color: var(--lcars-status-error);
+    box-shadow: 0 0 8px var(--lcars-status-error);
+}
+
+.status-error .statusValue {
+    color: var(--lcars-status-error);
+}
+
+.status-offline .statusIndicator {
+    background-color: var(--lcars-status-offline);
+    box-shadow: 0 0 8px var(--lcars-status-offline);
+}
+
+.status-offline .statusValue {
+    color: var(--lcars-status-offline);
+}
+
+/* Pulse Animation */
+.pulse .statusIndicator {
+    animation: statusPulse 2s ease-in-out infinite;
+}
+
+@keyframes statusPulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.6;
+        transform: scale(1.2);
+    }
+}

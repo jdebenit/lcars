@@ -1,0 +1,127 @@
+.loaderContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-family: 'Antonio', 'Arial Narrow', sans-serif;
+}
+
+.fullScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+}
+
+.barContainer {
+    display: flex;
+    gap: 10px;
+    height: 60px;
+    align-items: flex-end;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 30px;
+    background-color: currentColor;
+    animation: grow 1.5s infinite ease-in-out;
+}
+
+.bar1 {
+    animation-delay: 0s;
+}
+
+.bar2 {
+    animation-delay: 0.2s;
+}
+
+.bar3 {
+    animation-delay: 0.4s;
+}
+
+@keyframes grow {
+
+    0%,
+    100% {
+        height: 20%;
+        opacity: 0.5;
+    }
+
+    50% {
+        height: 100%;
+        opacity: 1;
+    }
+}
+
+.text {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+    from {
+        opacity: 0.6;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Color classes affecting 'currentColor' for bars */
+.color-orange {
+    color: var(--lcars-orange, #ff9900);
+}
+
+.color-blue {
+    color: var(--lcars-blue, #99ccff);
+}
+
+.color-purple {
+    color: var(--lcars-purple, #cc99cc);
+}
+
+.color-red {
+    color: var(--lcars-red, #cc6666);
+}
+
+.color-tan {
+    color: var(--lcars-tan, #ffcc99);
+}
+
+.color-yellow {
+    color: var(--lcars-yellow, #ffcc33);
+}
+
+/* Text colors might need explicit set if not inherited */
+.text-orange {
+    color: var(--lcars-orange, #ff9900);
+}
+
+.text-blue {
+    color: var(--lcars-blue, #99ccff);
+}
+
+.text-purple {
+    color: var(--lcars-purple, #cc99cc);
+}
+
+.text-red {
+    color: var(--lcars-red, #cc6666);
+}
+
+.text-tan {
+    color: var(--lcars-tan, #ffcc99);
+}
+
+.text-yellow {
+    color: var(--lcars-yellow, #ffcc33);
+}

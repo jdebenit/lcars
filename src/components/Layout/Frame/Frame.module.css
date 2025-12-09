@@ -1,0 +1,82 @@
+.frameContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* No height 100% by default, let content drive it */
+}
+
+.topRow,
+.bottomRow {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    /* Driven by elbow height */
+    align-items: flex-start;
+}
+
+.bottomRow {
+    align-items: flex-end;
+}
+
+.topBarSpacer,
+.bottomBarSpacer {
+    flex: 1;
+    /* Occupy remaining width */
+    height: 20px;
+    /* Should match thickness passed via inline style? Ideally yes. */
+    /* We need to sync this height with the 'thickness' prop. */
+    /* For now, assuming default 20px thickness for bars */
+}
+
+.topBarSpacer {
+    /* Top bar aligns with the top of the elbow */
+    /* But the Elbow "Top-Left" has its horizontal leg at y=0. */
+    /* So the bar implies y=0. */
+}
+
+.fillBar {
+    width: 100%;
+}
+
+.cap {
+    width: 20px;
+    /* Small cap width */
+    height: 100%;
+    /* Match row height? No, match bar thickness */
+}
+
+.middleRow {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    min-height: 50px;
+    /* Minimum content height */
+}
+
+.leftSidebar {
+    /* Width set inline */
+    /* This connects the top elbow leg to the bottom? */
+    /* The top elbow accounts for the top curve and some vertical drop. */
+    /* The sidebar just fills the gap. */
+    flex-shrink: 0;
+    margin-bottom: 5px;
+    /* LCARS gap */
+    margin-top: 5px;
+    /* LCARS gap */
+    /* Actually, LCARS usually has continuous sweeps. 
+       If we want continuous, margins should be 0. 
+       If we want "blocky" look, margins > 0. */
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    /* Often black background */
+    background-color: transparent;
+    color: var(--lcars-white, white);
+}
+
+.titleText {
+    margin-right: 10px;
+    /* Ensure visibility if needed */
+}

@@ -1,0 +1,58 @@
+.statusBadge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-family: 'Antonio', sans-serif;
+    font-weight: bold;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    background-color: var(--lcars-gray);
+    color: #000;
+    min-width: 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.statusOnline {
+    background-color: var(--lcars-blue);
+    color: #000;
+}
+
+.statusWarning {
+    background-color: var(--lcars-yellow);
+    color: #000;
+}
+
+.statusError {
+    background-color: var(--lcars-red);
+    color: #fff;
+    animation: flash 2s infinite;
+}
+
+.statusOffline {
+    background-color: var(--lcars-purple);
+    color: #fff;
+    opacity: 0.7;
+}
+
+.pulse {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-right: 6px;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes flash {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(0.95); opacity: 0.7; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(0.95); opacity: 0.7; }
+}

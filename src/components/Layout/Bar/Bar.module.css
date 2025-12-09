@@ -1,0 +1,96 @@
+.bar {
+    height: 100%;
+    width: 100%;
+    min-height: 20px;
+    /* Default thin bar */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /* LCARS text is often right-aligned in bars */
+    padding: 0 10px;
+    box-sizing: border-box;
+    font-family: 'Antonio', 'Arial Narrow', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    /* Default background if color class missing */
+    background-color: var(--lcars-blue, #99ccff);
+}
+
+.content {
+    color: #000;
+    /* Text inside bars is usually black */
+    font-size: 1.2em;
+    line-height: 1;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.clickable:hover {
+    filter: brightness(1.2);
+}
+
+/* Colors - Replicating standard LCARS palette */
+/* Note: Ideally these should be global utility classes, but local scope is safe */
+.color-orange {
+    background-color: var(--lcars-orange, #ff9900);
+}
+
+.color-blue {
+    background-color: var(--lcars-blue, #99ccff);
+}
+
+.color-purple {
+    background-color: var(--lcars-purple, #cc99cc);
+}
+
+.color-red {
+    background-color: var(--lcars-red, #cc6666);
+}
+
+.color-tan {
+    background-color: var(--lcars-tan, #ffcc99);
+}
+
+.color-yellow {
+    background-color: var(--lcars-yellow, #ffcc33);
+}
+
+.color-white {
+    background-color: var(--lcars-white, #ffffff);
+}
+
+.color-gray {
+    background-color: var(--lcars-gray, #999999);
+}
+
+/* Rounded Utility */
+/* Assume 'height' usually implies the diameter, so radius is 50% height?
+   No, usually ends are fully semicircular.
+   height: 100% is dynamic. So border-radius: 9999px works for "pill" shape.
+*/
+
+.rounded-left {
+    border-top-left-radius: 9999px;
+    border-bottom-left-radius: 9999px;
+}
+
+.rounded-right {
+    border-top-right-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+}
+
+.rounded-both {
+    border-radius: 9999px;
+}
+
+.rounded-top {
+    border-top-left-radius: 9999px;
+    border-top-right-radius: 9999px;
+}
+
+.rounded-bottom {
+    border-bottom-left-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+}

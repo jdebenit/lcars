@@ -1,0 +1,262 @@
+.chartContainer {
+    background: rgba(0, 0, 0, 0.3);
+    border: 2px solid var(--lcars-orange);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.chartTitle {
+    font-family: 'Antonio', sans-serif;
+    font-size: 1.2rem;
+    color: var(--lcars-orange);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+/* Bar Chart Styles */
+.barChart {
+    display: flex;
+    align-items: stretch;
+    /* Stretch children to full height */
+    justify-content: space-around;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.barWrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    height: 100%;
+    /* Take full height of chart */
+}
+
+.barContainer {
+    width: 100%;
+    flex: 1;
+    /* Take available space above label */
+    min-height: 0;
+    /* Allow shrinking */
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.bar {
+    width: 100%;
+    max-width: 60px;
+    background: var(--lcars-blue);
+    border-radius: 4px 4px 0 0;
+    position: relative;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 20px;
+}
+
+.bar:hover {
+    opacity: 0.8;
+    transform: translateY(-2px);
+}
+
+.barValue {
+    font-family: 'Antonio', sans-serif;
+    font-size: 0.85rem;
+    color: #000;
+    font-weight: bold;
+    position: absolute;
+    top: 2px;
+}
+
+.barLabel {
+    font-family: 'Antonio', sans-serif;
+    font-size: 0.85rem;
+    color: var(--lcars-tan);
+    text-transform: uppercase;
+    text-align: center;
+    word-break: break-word;
+    max-width: 80px;
+}
+
+/* Horizontal Bar Chart Styles */
+.horizontalBarChart {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 10px 0;
+}
+
+.horizontalBarWrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.horizontalBarLabel {
+    font-family: 'Antonio', sans-serif;
+    font-size: 0.9rem;
+    color: var(--lcars-tan);
+    text-transform: uppercase;
+    width: 200px;
+    min-width: 200px;
+    text-align: right;
+    flex-shrink: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.horizontalBarContainer {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.horizontalBar {
+    height: 32px;
+    background: var(--lcars-blue);
+    border-radius: 0 4px 4px 0;
+    position: relative;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+    min-width: 60px;
+}
+
+.horizontalBar:hover {
+    opacity: 0.8;
+    transform: translateX(3px);
+}
+
+.horizontalBarValue {
+    font-family: 'Antonio', sans-serif;
+    font-size: 0.9rem;
+    color: #000;
+    font-weight: bold;
+}
+
+
+/* Donut Chart Styles */
+.donutContainer {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 20px;
+}
+
+.donutSvg {
+    width: 100%;
+    height: 100%;
+}
+
+.donutCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    pointer-events: none;
+}
+
+.donutTotal {
+    font-family: 'Antonio', sans-serif;
+    font-size: 2rem;
+    color: var(--lcars-orange);
+    font-weight: bold;
+}
+
+.donutLabel {
+    font-family: 'Antonio', sans-serif;
+    font-size: 0.9rem;
+    color: var(--lcars-tan);
+    text-transform: uppercase;
+}
+
+/* Legend Styles */
+.legend {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.legendItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transition: background 0.2s ease;
+}
+
+.legendItem:hover {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.legendColor {
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    flex-shrink: 0;
+}
+
+.legendLabel {
+    font-family: 'Antonio', sans-serif;
+    font-size: 0.95rem;
+    color: var(--lcars-tan);
+    text-transform: uppercase;
+    flex: 1;
+}
+
+.legendValue {
+    font-family: 'Antonio', sans-serif;
+    font-size: 0.9rem;
+    color: var(--lcars-orange);
+    font-weight: bold;
+}
+
+/* Clickable elements */
+.clickable {
+    cursor: pointer;
+}
+
+.clickable:hover {
+    filter: brightness(1.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .chartTitle {
+        font-size: 1rem;
+    }
+
+    .barChart {
+        gap: 5px;
+    }
+
+    .bar {
+        max-width: 40px;
+    }
+
+    .barLabel {
+        font-size: 0.75rem;
+        max-width: 60px;
+    }
+
+    .donutContainer {
+        width: 150px;
+        height: 150px;
+    }
+
+    .donutTotal {
+        font-size: 1.5rem;
+    }
+}

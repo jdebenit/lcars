@@ -1,0 +1,31 @@
+.languageSelector {
+    display: inline-block;
+}
+
+.select {
+    padding: 8px 12px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid var(--lcars-orange);
+    border-radius: 4px;
+    color: var(--lcars-tan);
+    font-family: 'Antonio', sans-serif;
+    font-size: 0.95rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all var(--lcars-transition-base);
+}
+
+.select:hover {
+    background: rgba(255, 153, 0, 0.1);
+    border-color: var(--lcars-orange-light);
+}
+
+.select:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 153, 0, 0.5);
+}
+
+.select option {
+    background: var(--lcars-bg-secondary);
+    color: var(--lcars-tan);
+}

@@ -1,0 +1,30 @@
+.codeBlock {
+    margin-bottom: 1rem;
+}
+
+.title {
+    color: var(--lcars-tan);
+    font-family: 'Antonio', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.pre {
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid var(--lcars-orange);
+    border-radius: 4px;
+    padding: 1rem;
+    overflow: auto;
+    margin: 0;
+    max-height: 400px;
+}
+
+.code {
+    color: #66ccff;
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    white-space: pre;
+    display: block;
+}

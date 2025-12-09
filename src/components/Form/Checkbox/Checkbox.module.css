@@ -1,0 +1,90 @@
+.checkboxContainer {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    font-family: 'Antonio', 'Arial Narrow', sans-serif;
+    text-transform: uppercase;
+    user-select: none;
+    margin-right: 15px;
+    padding: 5px;
+    /* Add padding for better hit area */
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.checkboxContainer:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    /* Subtle hover highlight */
+}
+
+.checkboxContainer:active .indicator {
+    transform: scale(0.95);
+    /* Click feedback */
+}
+
+.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+    /* Ensure no clicks on disabled */
+}
+
+.indicator {
+    width: 20px;
+    height: 20px;
+    border: 3px solid currentColor;
+    /* Thicker border for better visibility */
+    margin-right: 10px;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 0.2s;
+    flex-shrink: 0;
+    /* Prevent shrinking */
+}
+
+.innerLight {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    background-color: transparent;
+    transition: background-color 0.2s;
+}
+
+.checked .innerLight {
+    background-color: currentColor;
+    box-shadow: 0 0 8px currentColor;
+    /* Enhanced glow */
+}
+
+.label {
+    color: var(--lcars-white, #fff);
+    font-size: 1.1rem;
+    line-height: 1;
+}
+
+/* Color definitions affecting 'currentColor' logic or border color directly */
+.color-orange {
+    color: var(--lcars-orange, #ff9900);
+}
+
+.color-blue {
+    color: var(--lcars-blue, #99ccff);
+}
+
+.color-purple {
+    color: var(--lcars-purple, #cc99cc);
+}
+
+.color-red {
+    color: var(--lcars-red, #cc6666);
+}
+
+.color-tan {
+    color: var(--lcars-tan, #ffcc99);
+}
+
+.color-yellow {
+    color: var(--lcars-yellow, #ffcc33);
+}

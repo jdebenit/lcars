@@ -1,0 +1,226 @@
+/* LCARS Base Styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--lcars-font-family);
+  background-color: var(--lcars-bg-primary);
+  color: var(--lcars-text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* LCARS Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--lcars-bg-secondary);
+  border-radius: var(--lcars-radius-sm);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--lcars-orange);
+  border-radius: var(--lcars-radius-sm);
+  transition: background var(--lcars-transition-fast);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--lcars-orange-light);
+}
+
+/* LCARS Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--lcars-font-weight-bold);
+  line-height: 1.2;
+  margin-bottom: var(--lcars-space-md);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+h1 {
+  font-size: var(--lcars-font-size-4xl);
+  color: var(--lcars-orange);
+}
+
+h2 {
+  font-size: var(--lcars-font-size-3xl);
+  color: var(--lcars-blue);
+}
+
+h3 {
+  font-size: var(--lcars-font-size-2xl);
+  color: var(--lcars-purple);
+}
+
+h4 {
+  font-size: var(--lcars-font-size-xl);
+}
+
+h5 {
+  font-size: var(--lcars-font-size-lg);
+}
+
+h6 {
+  font-size: var(--lcars-font-size-base);
+}
+
+p {
+  margin-bottom: var(--lcars-space-md);
+}
+
+/* LCARS Utility Classes */
+.lcars-text-center {
+  text-align: center;
+}
+
+.lcars-text-right {
+  text-align: right;
+}
+
+.lcars-text-uppercase {
+  text-transform: uppercase;
+}
+
+.lcars-text-muted {
+  color: var(--lcars-text-muted);
+}
+
+/* LCARS Animations */
+@keyframes lcars-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes lcars-glow {
+  0%, 100% {
+    box-shadow: 0 0 10px currentColor;
+  }
+  50% {
+    box-shadow: 0 0 20px currentColor;
+  }
+}
+
+@keyframes lcars-slide-in-right {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes lcars-slide-in-left {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes lcars-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.lcars-pulse {
+  animation: lcars-pulse 2s ease-in-out infinite;
+}
+
+.lcars-glow {
+  animation: lcars-glow 2s ease-in-out infinite;
+}
+
+/* LCARS Grid System */
+.lcars-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--lcars-space-lg);
+}
+
+.lcars-grid {
+  display: grid;
+  gap: var(--lcars-space-md);
+}
+
+.lcars-grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.lcars-grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.lcars-grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 1024px) {
+  .lcars-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .lcars-grid-2,
+  .lcars-grid-3,
+  .lcars-grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* LCARS Flex Utilities */
+.lcars-flex {
+  display: flex;
+}
+
+.lcars-flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lcars-flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lcars-flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.lcars-gap-sm {
+  gap: var(--lcars-space-sm);
+}
+
+.lcars-gap-md {
+  gap: var(--lcars-space-md);
+}
+
+.lcars-gap-lg {
+  gap: var(--lcars-space-lg);
+}

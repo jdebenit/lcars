@@ -1,0 +1,12 @@
+.podGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--lcars-space-md);
+}
+
+
+@media (max-width: 768px) {
+    .podGrid {
+        grid-template-columns: 1fr;
+    }
+}

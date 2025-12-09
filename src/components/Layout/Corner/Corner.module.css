@@ -1,0 +1,93 @@
+.cornerContainer {
+  display: inline-block;
+  position: relative;
+  /* Ensure no extra spacing */
+  line-height: 0;
+}
+
+/* Color Classes - setting 'color' for SVG currentColor */
+.color-orange {
+  color: var(--lcars-orange);
+}
+
+.color-blue {
+  color: var(--lcars-blue);
+}
+
+.color-purple {
+  color: var(--lcars-purple);
+}
+
+.color-red {
+  color: var(--lcars-red);
+}
+
+.color-yellow {
+  color: var(--lcars-yellow);
+}
+
+.color-tan {
+  color: var(--lcars-tan);
+}
+
+.color-white {
+  color: var(--lcars-white);
+}
+
+.color-gray {
+  color: var(--lcars-gray);
+}
+
+/* 
+   Simplest approach for a scalable LCARS elbow:
+   A container div that has the width/height of the whole shape.
+   It has a background color.
+   Masking or nested divs to "cut out" the inside?
+   
+   Better: Two bars connecting? No, that shows a seam.
+   
+   Classic CSS trick:
+   A single block with a border-radius on ONE corner.
+   But we need the "inside" to be transparent.
+   
+   So it's an L-shape.
+   
+   Approach: 
+   Main container: relative, width/height as specified.
+   
+   A pseudo-element or child div acting as the vertical leg.
+   A pseudo-element or child div acting as the horizontal leg.
+   Wait, if we do that, the intersection has to be perfect.
+   
+   Alternative:
+   A single div with width = overall width, height = overall height.
+   Border-radius on the outside corner.
+   Then a generic "inner content" that masks it? No.
+   
+   Let's go with the "Cutout" approach which is robust for fixed colors.
+   Outer div: Width/Height defined. Background Color = LCARS color. Border-radius on relevant corner.
+   Inner div: Absolute positioned. Background Color = Parent Background (Black/Transparent). 
+              Border-radius on relevant inner corner.
+              
+   Wait, the "Inner" part of the LCARS curve is also rounded!
+   LCARS elbows have constant thickness.
+   
+   So:
+   Outer Box (The Shape)
+     - Width: [width]
+     - Height: [height]
+     - Background: [LCARS Color]
+     - Border-Top-Left-Radius: [height / 2] (for example, if it's a top-left elbow)
+     
+   Inner Cutout (The Void)
+     - Positioned inside.
+     - Background: transparent (this component doesn't know what's behind it... wait, usually it's black background).
+     - If we can't assume black background, we must use SVG or Clip-path.
+     - SVG is safest for "transparent" background.
+*/
+
+.svgContainer {
+  display: block;
+  overflow: visible;
+  /* To ensure we don't clip if calculations are slightly off, though should be exact */
+}

@@ -1,0 +1,164 @@
+.gridContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-family: 'Antonio', 'Arial Narrow', sans-serif;
+    color: var(--lcars-tan, #ffcc99);
+    overflow: hidden;
+    /* Main container clips */
+}
+
+/* Scroll wrapper for the table content (Header + Rows) to scroll together */
+.scrollWrapper {
+    flex: 1;
+    overflow: auto;
+    /* Handles both X and Y */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.headerRow {
+    display: flex;
+    margin-bottom: 5px;
+    padding-left: 20px;
+    /* Space for sidebar if sticky? No */
+    /* Header needs to be at least as wide as content */
+    min-width: min-content;
+}
+
+.headerCell {
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    background-color: transparent;
+    border-bottom: 2px solid currentColor;
+    color: var(--lcars-orange, #ff9900);
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    /* Don't shrink below width */
+}
+
+.bodyWrapper {
+    display: flex;
+    flex: 1;
+    position: relative;
+    min-width: min-content;
+    /* Ensure rows don't wrap strangely */
+}
+
+.sideBar {
+    width: 15px;
+    border-top-left-radius: 10px;
+    margin-right: 5px;
+    background-color: var(--lcars-tan, #ffcc99);
+    flex-shrink: 0;
+    position: sticky;
+    /* Keep it visible if possible? tricky with overflow */
+    left: 0;
+}
+
+.rowsContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.row {
+    display: flex;
+    padding: 5px 0;
+    transition: background-color 0.1s;
+}
+
+.row:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--lcars-white, #fff);
+}
+
+.cell {
+    padding: 0 10px;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-shrink: 0;
+    /* Crucial for horizontal scroll */
+}
+
+.footerBar {
+    height: 15px;
+    width: 200px;
+    border-bottom-left-radius: 15px;
+    background-color: var(--lcars-tan, #ffcc99);
+    margin-top: 5px;
+    flex-shrink: 0;
+}
+
+/* Scrollbar styling */
+.scrollWrapper::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.scrollWrapper::-webkit-scrollbar-track {
+    background: #000;
+}
+
+.scrollWrapper::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 4px;
+}
+
+.scrollWrapper::-webkit-scrollbar-thumb:hover {
+    background: #666;
+}
+
+.color-orange {
+    color: var(--lcars-orange, #ff9900);
+}
+
+.color-blue {
+    color: var(--lcars-blue, #99ccff);
+}
+
+.color-purple {
+    color: var(--lcars-purple, #cc99cc);
+}
+
+.color-red {
+    color: var(--lcars-red, #cc6666);
+}
+
+.color-tan {
+    color: var(--lcars-tan, #ffcc99);
+}
+
+.color-yellow {
+    color: var(--lcars-yellow, #ffcc33);
+}
+
+.bg-orange {
+    background-color: var(--lcars-orange, #ff9900);
+}
+
+.bg-blue {
+    background-color: var(--lcars-blue, #99ccff);
+}
+
+.bg-purple {
+    background-color: var(--lcars-purple, #cc99cc);
+}
+
+.bg-red {
+    background-color: var(--lcars-red, #cc6666);
+}
+
+.bg-tan {
+    background-color: var(--lcars-tan, #ffcc99);
+}
+
+.bg-yellow {
+    background-color: var(--lcars-yellow, #ffcc33);
+}

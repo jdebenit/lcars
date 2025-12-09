@@ -1,0 +1,120 @@
+.container {
+    display: inline-block;
+    margin-bottom: 15px;
+    font-family: 'Antonio', 'Arial Narrow', sans-serif;
+}
+
+.fullWidth {
+    display: block;
+    width: 100%;
+}
+
+.label {
+    display: block;
+    color: var(--lcars-orange, #ff9900);
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+.inputWrapper {
+    display: flex;
+    position: relative;
+    min-height: 100px;
+}
+
+.textarea {
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: none;
+    color: var(--lcars-white, #fff);
+    font-family: 'Consolas', 'Monaco', monospace;
+    /* Monospace for data entry */
+    font-size: 1rem;
+    padding: 10px;
+    resize: vertical;
+    outline: none;
+    min-width: 200px;
+}
+
+.textarea:focus {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.hasError {
+    border: 1px solid red;
+    /* Raw CSS fallback or use LCARS red */
+}
+
+.errorMessage {
+    color: var(--lcars-red, #cc6666);
+    font-size: 0.9rem;
+    margin-top: 5px;
+    display: block;
+}
+
+/* Brackets */
+.bracketLeft,
+.bracketRight {
+    width: 10px;
+    background-color: currentColor;
+    opacity: 0.8;
+}
+
+.bracketLeft {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-right: 2px;
+}
+
+.bracketRight {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-left: 2px;
+}
+
+/* Colors */
+.color-orange {
+    color: var(--lcars-orange, #ff9900);
+    background-color: var(--lcars-orange, #ff9900);
+}
+
+.color-blue {
+    color: var(--lcars-blue, #99ccff);
+    background-color: var(--lcars-blue, #99ccff);
+}
+
+/* Wait, color classes apply to the brackets which use background-color. 
+   TextArea doesn't inherit background color.
+   The class selector needs to be specific.
+*/
+
+.bracketLeft.color-orange,
+.bracketRight.color-orange {
+    background-color: var(--lcars-orange, #ff9900);
+}
+
+.bracketLeft.color-blue,
+.bracketRight.color-blue {
+    background-color: var(--lcars-blue, #99ccff);
+}
+
+.bracketLeft.color-purple,
+.bracketRight.color-purple {
+    background-color: var(--lcars-purple, #cc99cc);
+}
+
+.bracketLeft.color-red,
+.bracketRight.color-red {
+    background-color: var(--lcars-red, #cc6666);
+}
+
+.bracketLeft.color-tan,
+.bracketRight.color-tan {
+    background-color: var(--lcars-tan, #ffcc99);
+}
+
+.bracketLeft.color-yellow,
+.bracketRight.color-yellow {
+    background-color: var(--lcars-yellow, #ffcc33);
+}

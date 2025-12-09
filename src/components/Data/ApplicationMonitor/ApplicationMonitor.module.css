@@ -1,0 +1,110 @@
+.appMonitor {
+    min-width: 400px;
+}
+
+.appHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--lcars-space-lg);
+    padding: var(--lcars-space-md);
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: var(--lcars-radius-sm);
+}
+
+
+.section {
+    margin-bottom: var(--lcars-space-lg);
+}
+
+.section:last-child {
+    margin-bottom: 0;
+}
+
+.sectionTitle {
+    margin: 0 0 var(--lcars-space-md) 0;
+    font-size: var(--lcars-font-size-lg);
+    font-weight: var(--lcars-font-weight-bold);
+    text-transform: uppercase;
+    padding: var(--lcars-space-sm);
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: var(--lcars-radius-sm);
+    font-family: 'Courier New', monospace;
+}
+
+.logEntry {
+    display: flex;
+    gap: var(--lcars-space-sm);
+    font-size: var(--lcars-font-size-sm);
+    padding: var(--lcars-space-xs);
+    border-left: 3px solid;
+    transition: all var(--lcars-transition-fast);
+}
+
+.logEntry:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.logTimestamp {
+    color: var(--lcars-text-muted);
+    flex-shrink: 0;
+}
+
+.logLevel {
+    font-weight: var(--lcars-font-weight-bold);
+    flex-shrink: 0;
+    min-width: 80px;
+}
+
+.logMessage {
+    color: var(--lcars-text-secondary);
+    flex: 1;
+}
+
+.logInfo {
+    border-left-color: var(--lcars-blue);
+}
+
+.logInfo .logLevel {
+    color: var(--lcars-blue);
+}
+
+.logWarning {
+    border-left-color: var(--lcars-status-warning);
+}
+
+.logWarning .logLevel {
+    color: var(--lcars-status-warning);
+}
+
+.logError {
+    border-left-color: var(--lcars-status-error);
+}
+
+.logError .logLevel {
+    color: var(--lcars-status-error);
+}
+
+@keyframes errorPulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+}
+
+@media (max-width: 768px) {
+    .appMonitor {
+        min-width: 100%;
+    }
+
+    .appHeader {
+        flex-direction: column;
+        gap: var(--lcars-space-sm);
+        align-items: flex-start;
+    }
+}

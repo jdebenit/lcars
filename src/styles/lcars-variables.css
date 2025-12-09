@@ -1,0 +1,102 @@
+:root {
+  /* LCARS Color Palette - Official Star Trek Colors */
+  --lcars-orange: #FF9900;
+  --lcars-orange-light: #FFAA33;
+  --lcars-orange-dark: #CC7700;
+  
+  --lcars-blue: #9999FF;
+  --lcars-blue-light: #CCCCFF;
+  --lcars-blue-dark: #6666CC;
+  
+  --lcars-purple: #CC99CC;
+  --lcars-purple-light: #DDAADD;
+  --lcars-purple-dark: #AA77AA;
+  
+  --lcars-red: #CC6666;
+  --lcars-red-light: #FF9999;
+  --lcars-red-dark: #993333;
+  
+  --lcars-yellow: #FFCC99;
+  --lcars-yellow-light: #FFDDAA;
+  --lcars-yellow-dark: #CCAA77;
+  
+  --lcars-tan: #FFCC66;
+  --lcars-tan-light: #FFDD88;
+  --lcars-tan-dark: #CCAA44;
+  
+  --lcars-peach: #FF9966;
+  --lcars-peach-light: #FFAA88;
+  --lcars-peach-dark: #CC7744;
+  
+  --lcars-lilac: #CC99FF;
+  --lcars-lilac-light: #DDAAFF;
+  --lcars-lilac-dark: #AA77CC;
+  
+  /* Background Colors */
+  --lcars-bg-primary: #000000;
+  --lcars-bg-secondary: #111111;
+  --lcars-bg-panel: #1a1a1a;
+  
+  /* Text Colors */
+  --lcars-text-primary: #FFFFFF;
+  --lcars-text-secondary: #CCCCCC;
+  --lcars-text-muted: #999999;
+  
+  /* Status Colors */
+  --lcars-status-online: #66FF66;
+  --lcars-status-warning: #FFCC00;
+  --lcars-status-error: #FF3333;
+  --lcars-status-offline: #666666;
+  
+  /* Border Radius - LCARS Characteristic Asymmetric Rounded Corners */
+  --lcars-radius-sm: 8px;
+  --lcars-radius-md: 16px;
+  --lcars-radius-lg: 24px;
+  --lcars-radius-xl: 32px;
+  --lcars-radius-pill: 999px;
+  
+  /* Spacing */
+  --lcars-space-xs: 4px;
+  --lcars-space-sm: 8px;
+  --lcars-space-md: 16px;
+  --lcars-space-lg: 24px;
+  --lcars-space-xl: 32px;
+  --lcars-space-2xl: 48px;
+  
+  /* Typography */
+  --lcars-font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --lcars-font-size-xs: 0.75rem;
+  --lcars-font-size-sm: 0.875rem;
+  --lcars-font-size-base: 1rem;
+  --lcars-font-size-lg: 1.125rem;
+  --lcars-font-size-xl: 1.25rem;
+  --lcars-font-size-2xl: 1.5rem;
+  --lcars-font-size-3xl: 2rem;
+  --lcars-font-size-4xl: 2.5rem;
+  
+  --lcars-font-weight-normal: 400;
+  --lcars-font-weight-medium: 500;
+  --lcars-font-weight-semibold: 600;
+  --lcars-font-weight-bold: 700;
+  
+  /* Transitions */
+  --lcars-transition-fast: 150ms ease-in-out;
+  --lcars-transition-base: 250ms ease-in-out;
+  --lcars-transition-slow: 400ms ease-in-out;
+  
+  /* Shadows */
+  --lcars-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --lcars-shadow-md: 0 4px 8px rgba(0, 0, 0, 0.4);
+  --lcars-shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.5);
+  --lcars-shadow-glow: 0 0 20px rgba(255, 153, 0, 0.5);
+  
+  /* Z-index */
+  --lcars-z-base: 1;
+  --lcars-z-dropdown: 1000;
+  --lcars-z-sticky: 1020;
+  --lcars-z-fixed: 1030;
+  --lcars-z-modal-backdrop: 1040;
+  --lcars-z-modal: 1050;
+  --lcars-z-popover: 1060;
+  --lcars-z-tooltip: 1070;
+}

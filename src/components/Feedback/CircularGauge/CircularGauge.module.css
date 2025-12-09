@@ -1,0 +1,93 @@
+.gaugeContainer {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.svg {
+    transform: rotate(0deg);
+}
+
+.bgCircle {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.1);
+}
+
+.progressCircle {
+    fill: none;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 1s ease-in-out;
+}
+
+.content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.valueText {
+    font-family: 'Courier New', monospace;
+    font-size: 1.5rem;
+    font-weight: var(--lcars-font-weight-bold);
+    line-height: 1;
+}
+
+.labelText {
+    font-family: var(--lcars-font-family);
+    font-size: 0.75rem;
+    font-weight: var(--lcars-font-weight-bold);
+    text-transform: uppercase;
+    color: var(--lcars-text-secondary);
+    margin-top: 4px;
+    letter-spacing: 0.05em;
+}
+
+/* Color Variants */
+.color-orange {
+    stroke: var(--lcars-orange);
+    color: var(--lcars-orange);
+}
+
+.color-orange.progressCircle {
+    filter: drop-shadow(0 0 4px rgba(255, 153, 0, 0.5));
+}
+
+.color-blue {
+    stroke: var(--lcars-blue);
+    color: var(--lcars-blue);
+}
+
+.color-blue.progressCircle {
+    filter: drop-shadow(0 0 4px rgba(153, 153, 255, 0.5));
+}
+
+.color-purple {
+    stroke: var(--lcars-purple);
+    color: var(--lcars-purple);
+}
+
+.color-purple.progressCircle {
+    filter: drop-shadow(0 0 4px rgba(204, 153, 204, 0.5));
+}
+
+.color-red {
+    stroke: var(--lcars-red);
+    color: var(--lcars-red);
+}
+
+.color-red.progressCircle {
+    filter: drop-shadow(0 0 4px rgba(204, 102, 102, 0.5));
+}
+
+.color-yellow {
+    stroke: var(--lcars-yellow);
+    color: var(--lcars-yellow);
+}
+
+.color-yellow.progressCircle {
+    filter: drop-shadow(0 0 4px rgba(255, 204, 153, 0.5));
+}

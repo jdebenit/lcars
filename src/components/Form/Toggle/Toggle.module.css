@@ -1,0 +1,100 @@
+.toggleContainer {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--lcars-space-md);
+    cursor: pointer;
+    user-select: none;
+}
+
+.switch {
+    position: relative;
+    width: 80px;
+    height: 32px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: var(--lcars-radius-pill);
+    transition: all var(--lcars-transition-base);
+    display: flex;
+    align-items: center;
+    padding: 4px;
+}
+
+.indicator {
+    width: 24px;
+    height: 24px;
+    background-color: var(--lcars-text-muted);
+    border-radius: 50%;
+    transition: all var(--lcars-transition-base);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+.statusText {
+    position: absolute;
+    right: 12px;
+    font-family: 'Courier New', monospace;
+    font-size: var(--lcars-font-size-xs);
+    font-weight: var(--lcars-font-weight-bold);
+    color: var(--lcars-text-muted);
+    transition: all var(--lcars-transition-base);
+}
+
+.label {
+    font-family: var(--lcars-font-family);
+    font-size: var(--lcars-font-size-sm);
+    font-weight: var(--lcars-font-weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--lcars-text-primary);
+}
+
+/* Checked State */
+.checked {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.checked .indicator {
+    transform: translateX(48px);
+}
+
+.checked .statusText {
+    right: auto;
+    left: 12px;
+    color: var(--lcars-text-primary);
+}
+
+/* Color Variants */
+.color-orange.checked .indicator {
+    background-color: var(--lcars-orange);
+    box-shadow: 0 0 10px var(--lcars-orange);
+}
+
+.color-blue.checked .indicator {
+    background-color: var(--lcars-blue);
+    box-shadow: 0 0 10px var(--lcars-blue);
+}
+
+.color-purple.checked .indicator {
+    background-color: var(--lcars-purple);
+    box-shadow: 0 0 10px var(--lcars-purple);
+}
+
+.color-red.checked .indicator {
+    background-color: var(--lcars-red);
+    box-shadow: 0 0 10px var(--lcars-red);
+}
+
+.color-yellow.checked .indicator {
+    background-color: var(--lcars-yellow);
+    box-shadow: 0 0 10px var(--lcars-yellow);
+}
+
+/* Disabled State */
+.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.disabled .indicator {
+    background-color: var(--lcars-text-muted) !important;
+    box-shadow: none !important;
+}
