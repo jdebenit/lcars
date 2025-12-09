@@ -34,5 +34,9 @@ export default defineConfig({
         environment: 'jsdom',
         setupFiles: './src/test-utils/setup.ts',
         include: ['src/**/*.test.{ts,tsx}'],
+        coverage: {
+            include: ['src/components/**/*.{ts,tsx}'],
+            exclude: ['**/*.test.{ts,tsx}', '**/*.stories.{ts,tsx}', 'src/**/index.ts', 'src/components/index.ts'],
+        },
     },
 });
