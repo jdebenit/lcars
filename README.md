@@ -32,22 +32,54 @@ npm install @lcars/react
 2.  **Use Components**:
 
     ```tsx
-    import { LcarsApp, Sidebar, Button } from '@lcars/react';
+    import { LcarsApp, Panel, Button, DataGrid } from '@lcars/react';
 
     function App() {
+      // Components fully support standard HTML attributes
       return (
         <LcarsApp>
-          <Sidebar title="Main Menu" />
-          <main>
-             <h1>Welcome to the Bridge</h1>
-             <Button color="orange" onClick={() => console.log('Engage')}>
-                ENGAGE
-             </Button>
-          </main>
+          <Panel title="Main Engineering" color="orange" style={{ margin: '20px' }}>
+             <h2>SYSTEM DIAGNOSTIC</h2>
+             
+             <DataGrid 
+                columns={[{ field: 'id', headerName: 'ID' }, { field: 'status', headerName: 'STATUS' }]}
+                rows={[{ id: 'ENG-1', status: 'OK' }]}
+             />
+
+             <div style={{ marginTop: '20px' }}>
+                <Button onClick={() => console.log('Engage')} id="engage-btn">
+                    INITIATE SEQUENCE
+                </Button>
+             </div>
+          </Panel>
         </LcarsApp>
       );
     }
     ```
+
+## Components
+
+### Form
+*   `Button`: Interactive buttons with various LCARS variants.
+*   `Checkbox`: LCARS-styled checkbox.
+*   `Input`: Text input fields with decoration.
+*   `Select`: Dropdown selection.
+*   `Radio`: Radio buttons.
+*   `Toggle`: Toggle switches.
+*   `TextArea`: Multiline text input.
+
+### Layout
+*   `Panel`: Standard content container with optional header.
+*   `Frame`: Bracket-style container for grouping content.
+*   `Header`: Top-level application header.
+*   `SideNav`: Vertical navigation menu.
+*   `Modal`: Overlay dialogs.
+
+### Data
+*   `DataGrid`: Sortable data tables with LCARS styling.
+*   `Chart`: Visual data representation.
+*   `ApplicationMonitor`: System status visualization.
+
 
 ## Development
 

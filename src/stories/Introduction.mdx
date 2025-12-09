@@ -15,4 +15,29 @@ Welcome to the LCARS (Library Computer Access and Retrieval System) React Compon
 
 ## Getting Started
 
+## Components
+
+### Form
+*   **Button**: Interactive buttons with various LCARS variants.
+*   **Checkbox**: LCARS-styled checkbox.
+*   **Input**: Text input fields with decoration.
+*   **Select**: Dropdown selection.
+*   **Radio**: Radio buttons.
+*   **Toggle**: Toggle switches.
+
+### Layout
+*   **Panel**: Standard content container with optional header.
+*   **Frame**: Bracket-style container for grouping content.
+*   **DataGrid**: Sortable data tables with LCARS styling.
+
+## Usage & Extensibility
+
+All core components now extend standard HTML attributes. You can pass props like `id`, `style`, `aria-label`, or event handlers directly:
+
+```tsx
+<Button onClick={handleClick} aria-label="Engage Warp Drive">
+  ENGAGE
+</Button>
+```
+
 Explore the components in the sidebar to understand how to use them in your application.
