@@ -33,9 +33,8 @@ describe('DataGrid', () => {
 
     it('renders correct number of rows', () => {
         const { container } = render(<DataGrid columns={columns} rows={rows} />);
-        // row class is used for each data row
-        const renderedRows = container.getElementsByClassName('row');
-        expect(renderedRows).toHaveLength(2);
+        const rowsContainer = container.querySelector('[class*="rowsContainer"]');
+        expect(rowsContainer?.children).toHaveLength(2);
     });
 
     it('applies custom className', () => {

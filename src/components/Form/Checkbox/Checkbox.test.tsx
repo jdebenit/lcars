@@ -24,7 +24,7 @@ describe('Checkbox', () => {
         expect(container.querySelector('[class*="checked"]')).toBeInTheDocument(); // Inner class checking relies on knowing implementation details or using updated test logic.
         // Better: check if we can query by role checkbox? The component is a div, so role might be missing unless added.
         // Based on implementation reading: className has 'checked'.
-        expect(container.firstChild).toHaveClass(/checkboxContainer/);
+        expect(container.firstElementChild?.className).toMatch(/checkboxContainer/);
         // We can't easily check internal state without querying specific classes if role isn't set.
     });
 
@@ -36,7 +36,7 @@ describe('Checkbox', () => {
         if (container) {
             fireEvent.click(container);
             expect(handleChange).not.toHaveBeenCalled();
-            expect(container).toHaveClass(/disabled/);
+            expect(container.className).toMatch(/disabled/);
         }
     });
 });

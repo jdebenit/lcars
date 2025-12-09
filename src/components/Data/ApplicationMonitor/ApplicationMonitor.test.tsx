@@ -22,7 +22,7 @@ describe('ApplicationMonitor', () => {
 
         expect(screen.getByText('Test App')).toBeInTheDocument();
         expect(screen.getByText('1.0.0')).toBeInTheDocument();
-        expect(screen.getByText('VERSION')).toBeInTheDocument();
+        expect(screen.getByText('VERSION:')).toBeInTheDocument();
     });
 
     it('renders endpoints correctly', () => {

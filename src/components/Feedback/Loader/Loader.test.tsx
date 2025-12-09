@@ -15,8 +15,9 @@ describe('Loader', () => {
 
     it('renders animation bars', () => {
         const { container } = render(<Loader />);
-        // barContainer + 3 bars
-        expect(container.querySelectorAll('div > div')).toHaveLength(5); // container, barContainer, bar1, bar2, bar3 - approx check
+        expect(container.querySelector('[class*="bar1"]')).toBeInTheDocument();
+        expect(container.querySelector('[class*="bar2"]')).toBeInTheDocument();
+        expect(container.querySelector('[class*="bar3"]')).toBeInTheDocument();
     });
 
     it('applies fullscreen class', () => {
