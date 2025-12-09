@@ -3,7 +3,7 @@ import styles from './Frame.module.css';
 import { Corner } from '../Corner/Corner';
 import { Bar } from '../Bar/Bar';
 
-export interface FrameProps {
+export interface FrameProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'color'> {
     children: React.ReactNode;
     title?: string;
     /** Color of the frame */
@@ -19,9 +19,10 @@ export const Frame: React.FC<FrameProps> = ({
     color = 'tan',
     thickness = 20,
     className = '',
+    ...props
 }) => {
     return (
-        <div className={`${styles.frameContainer} ${className}`}>
+        <div className={`${styles.frameContainer} ${className}`} {...props}>
             {/* Top Bar Area */}
             <div className={styles.topRow}>
                 <Corner

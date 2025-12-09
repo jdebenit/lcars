@@ -8,7 +8,7 @@ export interface GridColumn {
     align?: 'left' | 'center' | 'right';
 }
 
-export interface DataGridProps {
+export interface DataGridProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'color'> {
     columns: GridColumn[];
     rows: any[];
     color?: 'orange' | 'blue' | 'purple' | 'red' | 'yellow' | 'tan';
@@ -24,9 +24,10 @@ export const DataGrid: React.FC<DataGridProps> = ({
     className = '',
     headerColor = 'orange',
     height = '400px',
+    ...props
 }) => {
     return (
-        <div className={`${styles.gridContainer} ${className}`} style={{ height }}>
+        <div className={`${styles.gridContainer} ${className}`} {...props} style={{ height, ...props.style }}>
             {/* Scroll Wrapper handles both X and Y scrolling for content */}
             <div className={styles.scrollWrapper}>
                 {/* Header */}

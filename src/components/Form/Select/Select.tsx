@@ -6,7 +6,7 @@ export interface SelectOption {
     value: string;
 }
 
-export interface SelectProps {
+export interface SelectProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onChange' | 'color'> {
     options: SelectOption[];
     value?: string;
     onChange?: (value: string) => void;
@@ -26,6 +26,7 @@ export const Select: React.FC<SelectProps> = ({
     color = 'orange',
     className = '',
     disabled = false,
+    ...props
 }) => {
     const [isOpen, setIsOpen] = useState(false);
     const containerRef = useRef<HTMLDivElement>(null);
@@ -57,7 +58,7 @@ export const Select: React.FC<SelectProps> = ({
     const getColorClass = (c: string) => styles[`color-${c}`] || '';
 
     return (
-        <div ref={containerRef} className={`${styles.selectContainer} ${className}`}>
+        <div ref={containerRef} className={`${styles.selectContainer} ${className}`} {...props}>
             {label && <label className={styles.label}>{label}</label>}
 
             <div

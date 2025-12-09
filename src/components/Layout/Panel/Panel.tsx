@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Panel.module.css';
 
-export interface PanelProps {
+export interface PanelProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'color'> {
     children: React.ReactNode;
     title?: string;
     color?: 'orange' | 'blue' | 'purple' | 'red' | 'yellow' | 'tan';
@@ -13,6 +13,7 @@ export const Panel: React.FC<PanelProps> = ({
     title,
     color = 'orange',
     className = '',
+    ...props
 }) => {
     const panelClass = [
         styles.Panel,
@@ -23,7 +24,7 @@ export const Panel: React.FC<PanelProps> = ({
         .join(' ');
 
     return (
-        <div className={panelClass}>
+        <div className={panelClass} {...props}>
             {title && (
                 <div className={styles.panelHeader}>
                     <div className={styles.headerBar}></div>

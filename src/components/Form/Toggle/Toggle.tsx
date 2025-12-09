@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Toggle.module.css';
 
-export interface ToggleProps {
+export interface ToggleProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onChange' | 'color'> {
     label?: string;
     checked: boolean;
     onChange: (checked: boolean) => void;
@@ -17,6 +17,7 @@ export const Toggle: React.FC<ToggleProps> = ({
     color = 'orange',
     disabled = false,
     className = '',
+    ...props
 }) => {
     const toggleClass = [
         styles.toggleContainer,
@@ -26,14 +27,15 @@ export const Toggle: React.FC<ToggleProps> = ({
         .filter(Boolean)
         .join(' ');
 
-    const handleToggle = () => {
+    const handleToggle = (e: React.MouseEvent) => {
         if (!disabled) {
             onChange(!checked);
         }
+        if (props.onClick) props.onClick(e as any);
     };
 
     return (
-        <div className={toggleClass} onClick={handleToggle}>
+        <div className={toggleClass} onClick={handleToggle} {...props}>
             <div className={`${styles.switch} ${checked ? styles.checked : ''} ${styles[`color-${color}`]}`}>
                 <div className={styles.indicator}></div>
                 <div className={styles.statusText}>{checked ? 'ON' : 'OFF'}</div>
