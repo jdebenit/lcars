@@ -3,7 +3,7 @@ export interface SelectOption {
     label: string;
     value: string;
 }
-export interface SelectProps {
+export interface SelectProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onChange' | 'color'> {
     options: SelectOption[];
     value?: string;
     onChange?: (value: string) => void;

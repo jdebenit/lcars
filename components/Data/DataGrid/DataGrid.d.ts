@@ -5,7 +5,7 @@ export interface GridColumn {
     width?: number | string;
     align?: 'left' | 'center' | 'right';
 }
-export interface DataGridProps {
+export interface DataGridProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'color'> {
     columns: GridColumn[];
     rows: any[];
     color?: 'orange' | 'blue' | 'purple' | 'red' | 'yellow' | 'tan';

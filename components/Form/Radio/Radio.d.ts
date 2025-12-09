@@ -1,5 +1,5 @@
 import { default as React } from '../../../../node_modules/react';
-export interface RadioProps {
+export interface RadioProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onChange' | 'color'> {
     label?: string;
     checked: boolean;
     onChange: () => void;

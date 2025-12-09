@@ -1,5 +1,5 @@
 import { default as React } from '../../../../node_modules/react';
-export interface FrameProps {
+export interface FrameProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'color'> {
     children: React.ReactNode;
     title?: string;
     /** Color of the frame */
